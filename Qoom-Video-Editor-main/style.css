@@ -1,0 +1,167 @@
+/*  ###################################### GENERAL STYLING ###################################### */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: black;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.content
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+/* ###################################### VIDEO DISPLAY ###################################### */
+
+.editor-title
+{
+    text-align: center;
+    width: 100%;
+    color: red;
+}
+
+.wrapper
+{
+    width: 100%;
+    height: 40vh;
+}
+
+.video-container
+{
+    flex: 1 0 auto;
+    position:relative;
+    margin: 0 auto;
+    width: 30vw;
+    height: 30vh;
+    text-align: center;
+}
+
+.video-container video
+{
+    box-shadow: 5px 5px red;
+}
+
+.video-container video:hover
+{
+    transition-duration:0.25s;
+    box-shadow: 8px 8px red;
+}
+
+#video_html5_api
+{
+    max-height: 30vh;
+}
+
+#video
+{
+    position: static;
+    padding-top: 0;
+}
+
+/* ###################################### PROGRESS BAR ###################################### */
+#progress-bar
+{
+    border-color: red;
+    background-color: transparent;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: 8vh;
+    width: 100%;
+}
+
+.progress-bar-label
+{
+    text-align: center;
+    color: red;
+    visibility: hidden;
+}
+
+#bar
+{
+    transition-duration: 0.2s;
+    width: 0%;
+    background-color: red;
+    height: 5vh;
+    visibility: hidden;
+}
+
+/* ###################################### EDIT MENU ###################################### */
+
+.edit-menu
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#start-trim-value
+{
+    margin-right: 4vw;
+}
+
+#file-input
+{
+    width: 100%;
+    color: red;
+}
+
+.trim-gauge
+{
+    width: 4vw;
+}
+
+.select-button
+{
+    border: none;
+    border-radius: 3px;
+    background-color: red;
+    color: black;
+}
+
+#status
+{
+    color: white;
+}
+
+/* ###################################### RESULTING VIDEO ###################################### */
+
+#result 
+{
+    margin-top: 10vh;
+    width: 100%;
+    height: 30vh;
+    visibility: hidden;
+}
+
+/* ###################################### USAGE DESCRIPTION ###################################### */
+#usage-description
+{
+    width: 100%;
+    color: red;
+    margin: 0 5vw 5vh 5vw;
+}
+
+.usage-description-body h3
+{
+    margin: 3vh 3vw 1vh 3vw;
+}
+
+.usage-description-body p
+{
+    margin: 0 3vw 0 3vw;
+}

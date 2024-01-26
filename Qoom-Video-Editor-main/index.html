@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamer</title>
+    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.9.5/dist/ffmpeg.min.js"></script>
+
+    <script src='streamer.js' type="module"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <h1 class="editor-title">Video editor online!</h1>
+        <input id="file-input" type="file" accept="video/*" name="file" onchange="displayVideo();">
+        <div class="wrapper">
+            <div class="video-container">
+                <video autoplay id="video" class='video-js vjs-default-skin vjs-big-play-centered' controls>
+                    <source id="source" type="video/mp4" src="qoom-default.mp4">
+                </video>
+            </div>
+        </div>
+        <div class="progress-bar-label">
+            <label for="progress-bar">Progress:</label>
+        </div>
+        <div id="progress-bar">
+            <div id="bar"></div>
+        </div>
+        <div class="edit-menu">
+            <input id="start-trim-value" class="trim-gauge" type="number">
+            <input id="end-trim-value" class="trim-gauge" type="number">
+            <select name="filetype-select" id="filetype-select">
+                <option value="mp4">.mp4</option>
+                <!-- <option value="avi">.avi</option> KNOWN BUG - resulting video doesn't load .AVIs-->
+                <option value="mov">.mov</option>
+                <option value="webm">.webm</option>
+            </select>
+            <button id="begin-trim" type="button">Trim!</button>
+            <label for="status" id="status">Ready to convert!</label>
+            <br>
+            <video id="result" class='video-js vjs-default-skin vjs-big-play-centered' controls>
+                <source id="result-source">
+            </video>
+        </div>
+        <div id="usage-description">
+            <h1 id="usage-description-title">Usage</h1>
+            <div class="usage-description-body">
+                <h3>
+                    Trimming
+                </h3>
+                <p>
+                    Upload a video of your choosing, then type in the boxes (from left to right) the timestamp (in seconds) of the desired portion 
+                    and the ending timestamp, respectively. It's that simple!
+                </p>
+                <h3>
+                    Audio
+                </h3>
+                <p>
+                    Coming soon!
+                </p>
+                <h3>
+                    GitHub
+                </h3>
+                <p>
+                    This tool has a GitHub! Check it out <a href="https://github.com/Rivers-dev/Qoom-Video-Editor/tree/main" target="_blank">here.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
